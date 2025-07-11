@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: the_project-backend
+    env: python
+    buildCommand: 
+        pip install -r requirements.txt
+        python manage.py makemigrations
+        python manage.py migrate
+    startCommand: gunicorn backend.wsgi:application
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        fromSecret: RENDER_SECRET_KEY
+      - key: DEBUG
+        fromSecret: RENDER_DEBUG
+      - key: DB_URL
+        fromSecret: RENDER_DB_URL
