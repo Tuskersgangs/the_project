@@ -2,7 +2,7 @@ import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
 // Use VITE_API_URL from .env, fallback to actual Render backend
-const apiUrl = import.meta.env.VITE_API_URL || "https://the-project-kdip.onrender.com/api/";
+const apiUrl = import.meta.env.VITE_API_URL || "https://the-project-kdip.onrender.com/";
 
 const api = axios.create({
   baseURL: apiUrl,
