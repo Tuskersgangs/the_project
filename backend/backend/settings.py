@@ -134,14 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-# Static files location for collectstatic
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# Trust Render SSL proxy headers
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-
-# CSRF Protection for frontend POST requests
-CSRF_TRUSTED_ORIGINS = ["https://the-project-frontend.onrender.com"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
